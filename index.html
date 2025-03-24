@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rohan Garg | Dev Portfolio</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap" rel="stylesheet" />
+
+  <!-- GSAP & ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+  <!-- Particles.js -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+  <link rel="stylesheet" href="styles.css">
+  
+</head>
+<body data-theme="dark">
+  <!-- Skip Link for Accessibility -->
+  <a href="#main-content" class="skip-link">Skip to Content</a>
+
+  <!-- Preloader -->
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="spinner" role="status" aria-label="Loading"></div>
+  </div>
+  
+  <!-- Scroll Progress Bar -->
+  <div class="progress-container"><div class="progress-bar" id="progress-bar"></div></div>
+  
+  <!-- Back-to-Top Button -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to Top">Top</button>
+  
+  <!-- Custom Cursor -->
+  <div class="custom-cursor" id="custom-cursor" aria-hidden="true"></div>
+  
+  <!-- HEADER / NAVBAR -->
+  <header>
+    <nav class="nav-container wrapper" role="navigation" aria-label="Main Navigation">
+      <div class="logo">Rohan Garg</div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle Menu">&#9776;</button>
+      <ul id="nav-menu">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#hire">Contact</a></li>
+      </ul>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">☀️</button>
+    </nav>
+  </header>
+  
+  <!-- MAIN CONTENT -->
+  <main id="main-content">
+    <!-- HERO SECTION -->
+    <section id="hero" aria-label="Hero Section">
+      <div id="particles-js"></div>
+      <div class="hero-content">
+        <div class="profile-pic" tabindex="0">
+          <!-- Lazy-loaded image for performance -->
+          <img src="public/photo.jpeg" alt="Profile of Rohan Garg" loading="lazy" />
+        </div>
+        <!-- Terminal Typing Effect -->
+        <div class="terminal" aria-live="polite">
+          <span id="typed-text"></span><span class="cursor"></span>
+        </div>
+        <!-- CTA & Socials -->
+        <a href="#hire" class="btn-primary">Get In Touch</a>
+        <div class="social-links">
+          <a href="https://github.com/rohangrg" target="_blank" rel="noopener" aria-label="GitHub Profile">GitHub</a>
+          <a href="https://www.linkedin.com/in/rohangrg" target="_blank" rel="noopener" aria-label="LinkedIn Profile">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+    
+    <!-- ABOUT ME -->
+    <section id="about" aria-label="About Me">
+      <div class="wrapper">
+        <h2>About Me</h2>
+        <div class="section-content">
+          <code>
+{
+  "name": "Rohan Garg",
+  "role": "Ruby on Rails Developer",
+  "location": "UAE",
+  "experience": 6,
+  "passions": ["coding", "innovation", "scaling apps"]
+}
+          </code>
+          <p>
+            I build scalable web applications with passion and precision. Whether it’s optimizing performance or crafting intuitive interfaces, I bring code to life—one line at a time.
+          </p>
+        </div>
+      </div>
+    </section>
+    
+    <!-- EXPERIENCE -->
+    <section id="experience" aria-label="Work Experience">
+      <div class="wrapper">
+        <h2>Work Experience</h2>
+        <div class="section-content">
+          <div class="experience-item">
+            <h3>EKANEK | Team Lead</h3>
+            <h4>Nov 2024 - Present | Abu Dhabi, UAE</h4>
+            <ul>
+              <li>Led a cross-continental team to build a robust ecommerce platform.</li>
+              <li>Architected solutions for India’s largest telecom service provider (193.27M users).</li>
+            </ul>
+          </div>
+          <div class="experience-item">
+            <h3>Senior Software Developer</h3>
+            <h4>Jan 2022 - Oct 2024 | Abu Dhabi, UAE</h4>
+            <ul>
+              <li>Managed a team of 4-5 developers and integrated local payment gateways to expand our ecommerce presence.</li>
+              <li>Implemented a dynamic offer system to boost user engagement and sales.</li>
+            </ul>
+          </div>
+          <div class="experience-item">
+            <h3>Software Developer</h3>
+            <h4>Aug 2019 - Jan 2022 | Delhi, India</h4>
+            <ul>
+              <li>Launched OMS pre-launch, managing 45k+ orders with integrated systems.</li>
+              <li>Optimized APIs and search algorithms to drive performance and cost efficiency.</li>
+            </ul>
+          </div>
+          <div class="experience-item">
+            <h3>CodingNinjas | Software Developer Intern</h3>
+            <h4>June 2019 – July 2019 | Delhi, India</h4>
+            <ul>
+              <li>Enhanced security via browser fingerprinting and built an evaluation dashboard.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- SKILLS -->
+    <section id="skills" aria-label="Skills">
+      <div class="wrapper">
+        <h2>Skills</h2>
+        <div class="section-content">
+          <div class="skills-group">
+            <h3>Programming Languages</h3>
+            <div class="skills-list">
+              <span>Ruby</span>
+              <span>SQL</span>
+              <span>C</span>
+              <span>C++</span>
+              <span>Python</span>
+              <span>JavaScript</span>
+              <span>jQuery</span>
+            </div>
+          </div>
+          <div class="skills-group">
+            <h3>Tools &amp; Frameworks</h3>
+            <div class="skills-list">
+              <span>Ruby on Rails</span>
+              <span>PostgreSQL</span>
+              <span>Elasticsearch</span>
+              <span>SearchKick</span>
+              <span>Git</span>
+              <span>Vim</span>
+              <span>psql</span>
+              <span>Angular</span>
+            </div>
+          </div>
+          <div class="skills-group">
+            <h3>DevOps</h3>
+            <div class="skills-list">
+              <span>GCP - VMs</span>
+              <span>AWS - EC2 &amp; Load Balancers</span>
+              <span>APM (NewRelic)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- PROJECTS -->
+    <section id="projects" aria-label="Projects">
+      <div class="wrapper">
+        <h2>Projects</h2>
+        <div class="section-content">
+          <div class="project-grid">
+            <div class="project-card" tabindex="0">
+              <h3>Project Alpha</h3>
+              <p>A scalable ecommerce platform built with Ruby on Rails.</p>
+              <a href="#" target="_blank" rel="noopener" aria-label="View Project Alpha Details">View Details</a>
+            </div>
+            <div class="project-card" tabindex="0">
+              <h3>Project Beta</h3>
+              <p>An innovative SaaS solution with modern integrations.</p>
+              <a href="#" target="_blank" rel="noopener" aria-label="View Project Beta Details">View Details</a>
+            </div>
+            <div class="project-card" tabindex="0">
+              <h3>Project Gamma</h3>
+              <p>A robust API platform optimized for high performance.</p>
+              <a href="#" target="_blank" rel="noopener" aria-label="View Project Gamma Details">View Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- ACHIEVEMENTS -->
+    <section id="achievements" aria-label="Achievements">
+      <div class="wrapper">
+        <h2>Achievements</h2>
+        <div class="section-content achievements">
+          <ul>
+            <li>Participated in 8 hackathons, winning 6 of them.</li>
+            <li>Invited by MIT and won HACKMIT – a fully sponsored onsite hackathon.</li>
+            <li>Recognized by the Govt. of India for identifying a critical bug in the SIH website.</li>
+            <li>Named Best Employee for four consecutive years.</li>
+            <li>Started as an intern and earned a Pre-Placement Offer as the youngest developer.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    
+    <!-- CONTACT -->
+    <section id="hire" aria-label="Contact Me">
+      <div class="wrapper">
+        <h2>Contact Me</h2>
+        <div class="section-content">
+          <p>If you like what you see and want to build something awesome together, drop me a line!</p>
+          <form id="contact-form" novalidate>
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Your Name" required />
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Your Email" required />
+            <label for="message">Message</label>
+            <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <!-- FOOTER -->
+  <footer>
+    &copy; <span id="year"></span> Rohan Garg. All rights reserved.
+  </footer>
+  
+  <!-- GSAP, Particles & Custom Scripts -->
+  <script>
+    // Preloader Hide
+    window.addEventListener("load", () => {
+      const preloader = document.getElementById("preloader");
+      preloader.style.opacity = 0;
+      setTimeout(() => { preloader.style.display = "none"; }, 500);
+    });
+    
+    // Custom Cursor
+    const cursor = document.getElementById("custom-cursor");
+    document.addEventListener("mousemove", (e) => {
+      gsap.to(cursor, { duration: 0.1, x: e.clientX, y: e.clientY });
+    });
+    document.querySelectorAll("a, button, .project-card").forEach(el => {
+      el.addEventListener("mouseenter", () => {
+        gsap.to(cursor, { scale: 2, backgroundColor: "var(--accent-hover)", duration: 0.2 });
+      });
+      el.addEventListener("mouseleave", () => {
+        gsap.to(cursor, { scale: 1, backgroundColor: "var(--accent)", duration: 0.2 });
+      });
+    });
+    
+    // Scroll Progress Bar & Back-to-Top Visibility
+    window.addEventListener("scroll", () => {
+      const scrollTop = document.documentElement.scrollTop;
+      const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const progress = (scrollTop / scrollHeight) * 100;
+      document.getElementById("progress-bar").style.width = progress + "%";
+      
+      // Show back-to-top button when scrolled down
+      document.getElementById("back-to-top").style.display = scrollTop > 300 ? "block" : "none";
+    });
+    
+    // Back-to-Top Button Scroll
+    document.getElementById("back-to-top").addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+    
+    // Hamburger Menu Toggle for Mobile
+    const hamburger = document.getElementById("hamburger");
+    const navMenu = document.getElementById("nav-menu");
+    hamburger.addEventListener("click", () => {
+      navMenu.classList.toggle("open");
+    });
+    
+    // Initialize Particles.js in the hero section
+    particlesJS("particles-js", {
+      "particles": {
+        "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
+        "color": { "value": "#007acc" },
+        "shape": { "type": "circle" },
+        "opacity": { "value": 0.5, "random": false },
+        "size": { "value": 3, "random": true },
+        "line_linked": { "enable": true, "distance": 150, "color": "#007acc", "opacity": 0.4, "width": 1 },
+        "move": { "enable": true, "speed": 4, "direction": "none", "random": false, "straight": false, "out_mode": "out" }
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+          "onhover": { "enable": true, "mode": "repulse" },
+          "onclick": { "enable": true, "mode": "push" }
+        },
+        "modes": {
+          "repulse": { "distance": 100 },
+          "push": { "particles_nb": 4 }
+        }
+      },
+      "retina_detect": true
+    });
+    
+    // GSAP ScrollTrigger Animations for Sections
+    gsap.utils.toArray(".section-content").forEach((elem) => {
+      gsap.to(elem, {
+        scrollTrigger: { trigger: elem, start: "top 80%" },
+        opacity: 1,
+        skewY: 0,
+        duration: 1,
+        ease: "power2.out"
+      });
+    });
+    // Animate code blocks separately
+    gsap.utils.toArray("code").forEach((codeBlock) => {
+      gsap.to(codeBlock, {
+        scrollTrigger: { trigger: codeBlock, start: "top 80%" },
+        opacity: 1,
+        x: 0,
+        duration: 1,
+        ease: "power2.out",
+        delay: 0.2
+      });
+    });
+    
+    // Footer Year
+    document.getElementById("year").textContent = new Date().getFullYear();
+    
+    // Terminal Typing Effect
+    const textToType = 
+`Hello, I'm Rohan Garg!
+Ruby on Rails Developer | 6+ years of code.
+Building scalable apps and crushing bugs.`;
+    const typedTextEl = document.getElementById("typed-text");
+    let index = 0;
+    function typeChar() {
+      if (index < textToType.length) {
+        typedTextEl.textContent += textToType.charAt(index);
+        index++;
+        setTimeout(typeChar, 30);
+      }
+    }
+    setTimeout(typeChar, 500);
+    
+    // Theme Toggle
+    const themeToggle = document.getElementById("theme-toggle");
+    themeToggle.addEventListener("click", () => {
+      const body = document.body;
+      if (body.getAttribute("data-theme") === "dark") {
+        body.setAttribute("data-theme", "light");
+        themeToggle.textContent = "🌙";
+      } else {
+        body.setAttribute("data-theme", "dark");
+        themeToggle.textContent = "☀️";
+      }
+    });
+    
+    // Basic Contact Form Validation
+    const contactForm = document.getElementById("contact-form");
+    contactForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const message = document.getElementById("message").value.trim();
+      if (name === "" || email === "" || message === "") {
+        alert("Please fill in all fields.");
+        return;
+      }
+      // Simulate sending message (integrate with backend/email API as needed)
+      alert("Message sent! Thank you for reaching out.");
+      contactForm.reset();
+    });
+  </script>
+</body>
+</html>
