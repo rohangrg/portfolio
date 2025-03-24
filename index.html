@@ -48,7 +48,7 @@
         <li><a href="#about">About</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
+        <!-- <li><a href="#projects">Projects</a></li> -->
         <li><a href="#achievements">Achievements</a></li>
         <li><a href="#hire">Contact</a></li>
       </ul>
@@ -157,34 +157,33 @@
           <div class="skills-group">
             <h3>Programming Languages</h3>
             <div class="skills-list">
-              <span>Ruby</span>
-              <span>SQL</span>
-              <span>C</span>
-              <span>C++</span>
-              <span>Python</span>
-              <span>JavaScript</span>
-              <span>jQuery</span>
+              <span><img src="icons/ruby.png" alt="Ruby"> Ruby</span>
+              <span><img src="icons/sql.png" alt="SQL"> SQL</span>
+              <span><img src="icons/c.png" alt="C"> C</span>
+              <span><img src="icons/cpp.png" alt="C++"> C++</span>
+              <span><img src="icons/python.png" alt="Python"> Python</span>
+              <span><img src="icons/javascript.png" alt="JavaScript"> JavaScript</span>
+              <span><img src="icons/jquery.png" alt="jQuery"> jQuery</span>
             </div>
           </div>
           <div class="skills-group">
             <h3>Tools &amp; Frameworks</h3>
             <div class="skills-list">
-              <span>Ruby on Rails</span>
-              <span>PostgreSQL</span>
-              <span>Elasticsearch</span>
-              <span>SearchKick</span>
-              <span>Git</span>
-              <span>Vim</span>
-              <span>psql</span>
-              <span>Angular</span>
+              <span><img src="icons/rails.png" alt="Ruby on Rails"> Ruby on Rails</span>
+              <span><img src="icons/postgresql.png" alt="PostgreSQL"> PostgreSQL</span>
+              <span><img src="icons/elasticsearch.png" alt="Elasticsearch"> Elasticsearch</span>
+              <span><img src="icons/searchkick.png" alt="SearchKick"> SearchKick</span>
+              <span><img src="icons/git.png" alt="Git"> Git</span>
+              <span><img src="icons/vim.png" alt="Vim"> Vim</span>
+              <span><img src="icons/angular.png" alt="Angular"> Angular</span>
             </div>
           </div>
           <div class="skills-group">
             <h3>DevOps</h3>
             <div class="skills-list">
-              <span>GCP - VMs</span>
-              <span>AWS - EC2 &amp; Load Balancers</span>
-              <span>APM (NewRelic)</span>
+              <span><img src="icons/gcp.png" alt="GCP"> GCP - VMs</span>
+              <span><img src="icons/aws.png" alt="AWS"> AWS - EC2 &amp; Load Balancers</span>
+              <span><img src="icons/newrelic.png" alt="NewRelic"> APM (NewRelic)</span>
             </div>
           </div>
         </div>
@@ -192,7 +191,7 @@
     </section>
     
     <!-- PROJECTS -->
-    <section id="projects" aria-label="Projects">
+    <!-- <section id="projects" aria-label="Projects">
       <div class="wrapper">
         <h2>Projects</h2>
         <div class="section-content">
@@ -215,7 +214,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
     
     <!-- ACHIEVEMENTS -->
     <section id="achievements" aria-label="Achievements">
@@ -411,12 +410,12 @@ Building scalable apps and crushing bugs.`;
                 if (entry.isIntersecting) {
                     // Start loading animation
                     setTimeout(() => {
-                      progressBar.style.width = "100%"; 
+                      progressBar.style.width = "200%"; 
 
                       setTimeout(() => {
                           loadingContainer.style.display = "none"; 
                           jsonContainer.classList.remove("hidden"); 
-                      }, 2100);
+                      }, 1100);
                     }, 400);
 
                     observer.unobserve(aboutSection); // Stop observing after triggering once
