@@ -460,6 +460,28 @@ code {
   border-radius: 4px;
 }
 
+.achievements {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.achievement-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  border-left: 5px solid #007bff;
+  background: var(--bg-section);
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+}
+.achievement-card:hover {
+  transform: scale(1.05);
+}
+.icon {
+  font-size: 24px;
+}
+
 /* CONTACT SECTION */
 #hire form {
   max-width: 500px;
