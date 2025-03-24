@@ -83,16 +83,25 @@
     <section id="about" aria-label="About Me">
       <div class="wrapper">
         <h2>About Me</h2>
-        <div class="section-content">
+    
+        <div id="loading-container">
+          <p>Fetching data...</p>
+          <div class="progress-bar">
+            <div class="progress"></div>
+          </div>
+        </div>
+    
+        <div id="json-container" class="hidden">
           <code>
-{
-  "name": "Rohan Garg",
-  "role": "Ruby on Rails Developer",
-  "location": "UAE",
-  "experience": 6,
-  "passions": ["coding", "innovation", "scaling apps"]
-}
+    {
+      "name": "Rohan Garg",
+      "role": "Ruby on Rails Developer",
+      "location": "UAE",
+      "experience": 6,
+      "passions": ["coding", "innovation", "scaling apps"]
+    }
           </code>
+
           <p>
             I build scalable web applications with passion and precision. Whether it’s optimizing performance or crafting intuitive interfaces, I bring code to life—one line at a time.
           </p>
@@ -298,12 +307,12 @@
     // Initialize Particles.js in the hero section
     particlesJS("particles-js", {
       "particles": {
-        "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
-        "color": { "value": "#007acc" },
+        "number": { "value": 400, "density": { "enable": true, "value_area": 800 } },
+        "color": { "value": "#ffffff" },
         "shape": { "type": "circle" },
         "opacity": { "value": 0.5, "random": false },
         "size": { "value": 3, "random": true },
-        "line_linked": { "enable": true, "distance": 150, "color": "#007acc", "opacity": 0.4, "width": 1 },
+        "line_linked": { "enable": false, "distance": 150, "color": "#007acc", "opacity": 0.4, "width": 1 },
         "move": { "enable": true, "speed": 4, "direction": "none", "random": false, "straight": false, "out_mode": "out" }
       },
       "interactivity": {
@@ -389,6 +398,36 @@ Building scalable apps and crushing bugs.`;
       alert("Message sent! Thank you for reaching out.");
       contactForm.reset();
     });
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const loadingContainer = document.getElementById("loading-container");
+        const jsonContainer = document.getElementById("json-container");
+        const progressBar = document.querySelector(".progress");
+        const aboutSection = document.getElementById("about");
+
+        // Intersection Observer to detect when the About section is visible
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Start loading animation
+                    setTimeout(() => {
+                      progressBar.style.width = "100%"; 
+
+                      setTimeout(() => {
+                          loadingContainer.style.display = "none"; 
+                          jsonContainer.classList.remove("hidden"); 
+                      }, 2100);
+                    }, 400);
+
+                    observer.unobserve(aboutSection); // Stop observing after triggering once
+                }
+            });
+        }, { threshold: 0.3 }); // Trigger when 30% of the section is visible
+
+        observer.observe(aboutSection);
+    });
+
+
   </script>
 </body>
 </html>
