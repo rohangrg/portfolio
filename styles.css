@@ -322,13 +322,13 @@ nav ul li a:hover, nav ul li a:focus {
   background: var(--accent-hover);
 }
 .social-links {
-  display: flex;
+  /* display: flex; */
   gap: 1rem;
   justify-content: center;
 }
 .social-links a {
   font-size: 1.2rem;
-  color: var(--text-alt);
+  color: #ffffffbf;
   transition: color 0.2s ease;
 }
 .social-links a:hover, .social-links a:focus {

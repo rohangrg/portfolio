@@ -141,20 +141,20 @@ Building scalable apps and crushing bugs.`;
   });
   
   // Basic Contact Form Validation
-  const contactForm = document.getElementById("contact-form");
-  contactForm.addEventListener("submit", (e) => {
-    e.preventDefault();
-    const name = document.getElementById("name").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const message = document.getElementById("message").value.trim();
-    if (name === "" || email === "" || message === "") {
-      alert("Please fill in all fields.");
-      return;
-    }
-    // Simulate sending message (integrate with backend/email API as needed)
-    alert("Message sent! Thank you for reaching out.");
-    contactForm.reset();
-  });
+  // const contactForm = document.getElementById("contact-form");
+  // contactForm.addEventListener("submit", (e) => {
+  //   e.preventDefault();
+  //   const name = document.getElementById("name").value.trim();
+  //   const email = document.getElementById("email").value.trim();
+  //   const message = document.getElementById("message").value.trim();
+  //   if (name === "" || email === "" || message === "") {
+  //     alert("Please fill in all fields.");
+  //     return;
+  //   }
+  //   // Simulate sending message (integrate with backend/email API as needed)
+  //   alert("Message sent! Thank you for reaching out.");
+  //   contactForm.reset();
+  // });
 
   document.addEventListener("DOMContentLoaded", function () {
       const loadingContainer = document.getElementById("loading-container");
