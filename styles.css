@@ -12,6 +12,7 @@
   --terminal-bg: #1a1a1a;
   --terminal-prefix: #00916e;
   --cursor-color: #00ff9c;
+  --skills-list-color: #202020;
 }
 [data-theme="light"] {
   --bg-color: #f4f4f4;
@@ -26,6 +27,7 @@
   --terminal-bg: #ddd;
   --terminal-prefix: #007acc;
   --cursor-color: #007acc;
+  --skills-list-color: white;
 }
 
 /* RESET */
@@ -411,7 +413,7 @@ code {
   padding: 10px 15px;
   margin: 5px;
   font-size: 16px;
-  background: #202020;
+  background: var(--skills-list-color);
   transition: all 0.3s ease;
   white-space: nowrap;
 }
