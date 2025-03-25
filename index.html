@@ -17,6 +17,11 @@
   <!-- Particles.js -->
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.0.2/glide.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.0.2/css/glide.core.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.0.2/css/glide.theme.css">
+
   <link rel="stylesheet" href="styles.css">
   
 </head>
@@ -50,7 +55,7 @@
         <li><a href="#skills">Skills</a></li>
         <!-- <li><a href="#projects">Projects</a></li> -->
         <li><a href="#achievements">Achievements</a></li>
-        <li><a href="#hire">Contact</a></li>
+        <li><a href="#hire">Hire Me</a></li>
       </ul>
       <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">☀️</button>
     </nav>
@@ -64,7 +69,7 @@
       <div class="hero-content">
         <div class="profile-pic" tabindex="0">
           <!-- Lazy-loaded image for performance -->
-          <img src="public/photo.jpeg" alt="Profile of Rohan Garg" loading="lazy" />
+          <img src="images/photo.jpeg" alt="Profile of Rohan Garg" loading="lazy" />
         </div>
         <!-- Terminal Typing Effect -->
         <div class="terminal" aria-live="polite">
@@ -217,38 +222,55 @@
     </section> -->
     
     <!-- ACHIEVEMENTS -->
-    <section id="achievements" aria-label="Achievements">
-      <div class="wrapper">
-        <h2>Achievements</h2>
-        <div class="achievements">
-          <div class="achievement-card">
-            <span class="icon">🏆</span>
-            <p>Participated in <strong>8 hackathons</strong>, winning <strong>6</strong> of them.</p>
-          </div>
-          <div class="achievement-card">
-            <span class="icon">🎓</span>
-            <p>Invited by <strong>MIT</strong> and won <strong>HACKMIT</strong> – a fully sponsored onsite hackathon.</p>
-          </div>
-          <div class="achievement-card">
-            <span class="icon">🔍</span>
-            <p>Recognized by the <strong>Govt. of India</strong> for identifying a critical bug in the SIH website.</p>
-          </div>
-          <div class="achievement-card">
-            <span class="icon">🏅</span>
-            <p>Named <strong>Best Employee</strong> for <strong>four consecutive years</strong>.</p>
-          </div>
-          <div class="achievement-card">
-            <span class="icon">🚀</span>
-            <p>Started as an intern and earned a <strong>Pre-Placement Offer</strong> as the youngest developer.</p>
-          </div>
-        </div>
+    <section id="achievement" class="glide glide-multi" aria-label="Achievements">
+      <div class="wrappe glide__track" data-glide-el="track">
+        <!-- <h2>Achievements</h2> -->
+        <ul class="achievement glide__slides">
+          <li class="achievement-card glide__slide">
+            <div>
+              <div class="hackathons-imgs">
+                <img src="images/hack10.jpg">
+                <img src="images/hack11.jpg">
+                <img src="images/hack12.jpg">
+                <img src="images/hack1.jpeg">
+                <img src="images/hack4.jpeg">
+                <img src="images/hack7.jpg">
+              </div>
+              <p><span class="icon">🏆</span> Participated in<strong>&nbsp;8 hackathons&nbsp;</strong>, winning <strong>&nbsp; 6 &nbsp;</strong> of them.</p>
+            </div>
+          </li>
+          <li class="achievement-card glide__slide">
+            <div>
+              <img src="images/mit.jpeg">  
+              <p><span class="icon">🎓</span>Invited by <strong>&nbsp; MIT &nbsp;</strong> and won <strong>&nbsp; HACKMIT &nbsp;</strong> – a fully sponsored onsite hackathon.</p>
+            </div>
+          </li>
+          <li class="achievement-card glide__slide">
+            <div>
+              <img src="images/aictc-appreciation.jpg">
+              <p><span class="icon">🔍</span>Recognized by the <strong>&nbsp; Govt. of India &nbsp;</strong> for identifying a critical bug in the SIH website.</p>
+            </div>
+          </li>
+          <li class="achievement-card glide__slide">
+            <div>
+              <img src="images/photo.jpeg">
+              <p><span class="icon">🏅</span>Named <strong>&nbsp; Best Employee &nbsp;</strong> for <strong>&nbsp; four consecutive years &nbsp;</strong>.</p>
+            </div>
+          </li>
+          <li class="achievement-card glide__slide">
+            <div>
+              <img src="images/employee.png">
+              <p><span class="icon">🚀</span>Started as an intern and earned a <strong>&nbsp; Pre-Placement Offer &nbsp;</strong> as the youngest developer.</p>
+            </div>
+          </li>
+        </ul>
       </div>
     </section>
     
     <!-- CONTACT -->
     <section id="hire" aria-label="Contact Me">
       <div class="wrapper">
-        <h2>Contact Me</h2>
+        <h2>Hire Me</h2>
         <div class="section-content">
           <p>If you like what you see and want to build something awesome together, drop me a line!</p>
           <form id="contact-form" novalidate>
@@ -439,6 +461,14 @@ Building scalable apps and crushing bugs.`;
         observer.observe(aboutSection);
     });
 
+    var glideMulti = new Glide('.glide-multi', {
+      type: 'carousel',
+      // autoplay: 3000,
+      focusAt: 'center',
+      perView: 2, // Show 3 at a time
+      gap: 50, // Adds spacing between slides
+      animationDuration: 800, // Smooth transition
+    }).mount();
 
   </script>
 </body>
