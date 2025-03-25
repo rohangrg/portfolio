@@ -546,7 +546,8 @@ code {
 /* CONTACT SECTION */
 #hire form {
   max-width: 500px;
-  margin: 0 auto;
+  /* margin: 0 auto; */
+  flex: 1;
 }
 #hire p {
   font-size: 1rem;
@@ -570,7 +571,7 @@ code {
   width: 100%;
   padding: 0.8rem;
   margin-bottom: 1rem;
-  border: 1px solid var(--bg-alt);
+  border: 1px solid #bbbbbb;
   border-radius: 4px;
   background: var(--bg-section);
   color: var(--text-color);
@@ -591,6 +592,20 @@ code {
 }
 #hire button:hover, #hire button:focus {
   background: var(--accent-hover);
+}
+
+.form-section-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.form-section-container > img {
+  height: 200px;
+  border-radius: 4px;
+  margin-left: 60px;
 }
 
 /* FOOTER */

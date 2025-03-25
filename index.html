@@ -100,15 +100,15 @@
           <code>
     {
       "name": "Rohan Garg",
-      "role": "Ruby on Rails Developer",
+      "role": "Senior Ruby on Rails Developer",
       "location": "UAE",
-      "experience": 6,
+      "experience": 6 years,
       "passions": ["coding", "innovation", "scaling apps"]
     }
           </code>
 
           <p>
-            I build scalable web applications with passion and precision. Whether it’s optimizing performance or crafting intuitive interfaces, I bring code to life—one line at a time.
+            I build scalable web applications with passion and precision. Whether it’s optimizing performance or crafting intuitive interfaces, I bring code to life <br>(One line at a time)
           </p>
         </div>
       </div>
@@ -120,37 +120,62 @@
         <h2>Work Experience</h2>
         <div class="section-content">
           <div class="experience-item">
-            <h3>EKANEK | Team Lead</h3>
-            <h4>Nov 2024 - Present | Abu Dhabi, UAE</h4>
+            <h3>EKANEK | Senior Software Developer</h3>
+            <h4>Jan 2022 - Present | Abu Dhabi, UAE</h4>
             <ul>
-              <li>Led a cross-continental team to build a robust ecommerce platform.</li>
-              <li>Architected solutions for India’s largest telecom service provider (193.27M users).</li>
-            </ul>
-          </div>
-          <div class="experience-item">
-            <h3>Senior Software Developer</h3>
-            <h4>Jan 2022 - Oct 2024 | Abu Dhabi, UAE</h4>
-            <ul>
-              <li>Managed a team of 4-5 developers and integrated local payment gateways to expand our ecommerce presence.</li>
-              <li>Implemented a dynamic offer system to boost user engagement and sales.</li>
-            </ul>
-          </div>
-          <div class="experience-item">
-            <h3>Software Developer</h3>
-            <h4>Aug 2019 - Jan 2022 | Delhi, India</h4>
-            <ul>
-              <li>Launched OMS pre-launch, managing 45k+ orders with integrated systems.</li>
-              <li>Optimized APIs and search algorithms to drive performance and cost efficiency.</li>
-            </ul>
-          </div>
-          <div class="experience-item">
-            <h3>CodingNinjas | Software Developer Intern</h3>
-            <h4>June 2019 – July 2019 | Delhi, India</h4>
-            <ul>
-              <li>Enhanced security via browser fingerprinting and built an evaluation dashboard.</li>
+              <li>Leading a team of 4-5 Developers to the UAE, spearheading the expansion of
+                our ecommerce platform. Overseeing seamless integration with local payment
+                gateways, collaborating with regional delivery partners, and optimizing
+                warehouse operations for a robust market presence.</li><br>
+              <li>Developed an innovative offer system capable of creating any types of offers
+                to enhance customer engagement and drive sales.</li><br>
+              <li>Currently involved in expanding operations to a new country, collaborating
+                with a diverse team to ensure a seamless transition.</li>
             </ul>
           </div>
         </div>
+
+        <br>
+
+        <div class="section-content">
+          <div class="experience-item">
+            <h3>EKANEK | Software Developer</h3>
+            <h4>August 2019 - Jan 2022 | Delhi, India</h4>
+            <ul>
+              <li>Developed and Launched OMS pre-launch, managing 45k+ orders integrated
+                with shipping, warehouse, accounting, and payment systems</li> <br>
+              <li>Kick-started website development, replicating app features on the Website in
+                15 days, enhancing accessibility and engagement. This effort led to approx 23%
+                increase in overall orders.</li> <br>
+              <li>Worked on cost optimization in VMs and PostgreSQL, reducing queries and
+                enabling horizontal scaling, resulting in an annual savings of $100,000 USD.</li> <br>
+              <li>Improved search algorithm, adding intelligence, understanding user behavior,
+                and gaining e-commerce industry knowledge for Foxy’s product.</li> <br>
+              <li>Optimized frequently used APIs, achieving a 10x improvement in response
+                times using New Relic for performance measurement.</li> <br>
+              <li>Expanded payment options on Foxy by building 10 different payment
+                integrations to meet customer demand in India.</li> <br>
+              <li>Gained experience with AWS and EC2 instances, deploying changes, and
+                learning load balancing with multiple production instances.</li> <br>
+              <li>Collaborated with CTO and product</li> <br>
+            </ul>
+          </div>
+        </div>
+
+        <br>
+
+        <div class="section-content">
+          <div class="experience-item">
+            <h3>CODING NINJAS | Software Developer Intern</h3>
+            <h4>June 2019 – July 2019 | Delhi, India</h4>
+            <ul>
+              <li>Full-stack developer- Backend (Ruby on Rails), Frontend (Angular 7)</li><br>
+              <li>Worked on a module for improving the security using Browser Fingerprinting .</li><br>
+              <li>Made a dashboard from scratch to view and evaluate Student’s projects.</li>
+            </ul>
+          </div>
+        </div>
+
       </div>
     </section>
     
@@ -273,15 +298,18 @@
         <h2>Contact Me</h2>
         <div class="section-content">
           <p>If you like what you see and want to build something awesome together, drop me a line!</p>
-          <form id="contact-form" novalidate>
-            <label for="name">Name</label>
-            <input type="text" id="name" placeholder="Your Name" required />
-            <label for="email">Email</label>
-            <input type="email" id="email" placeholder="Your Email" required />
-            <label for="message">Message</label>
-            <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
-          </form>
+          <div class="form-section-container">
+            <img src="images/contact_me.jpg">
+            <form id="contact-form" novalidate>
+              <label for="name">Name</label>
+              <input type="text" id="name" placeholder="Your Name" required />
+              <label for="email">Email</label>
+              <input type="email" id="email" placeholder="Your Email" required />
+              <label for="message">Message</label>
+              <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+              <button type="submit">Send Message</button>
+            </form>
+          </div>
         </div>
       </div>
     </section>
@@ -390,8 +418,8 @@
     
     // Terminal Typing Effect
     const textToType = 
-`Hello, I'm Rohan Garg!
-Ruby on Rails Developer | 6+ years of code.
+`Hello, I'm Rohan Garg! I'm based out of UAE
+Senior Ruby on Rails Developer | 6+ years of code.
 Building scalable apps and crushing bugs.`;
     const typedTextEl = document.getElementById("typed-text");
     let index = 0;
