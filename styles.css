@@ -43,7 +43,6 @@ body {
   scroll-behavior: smooth;
   line-height: 1.5;
   transition: background-color 0.3s, color 0.3s;
-  cursor: none; /* Hide default cursor */
   overflow-x: hidden;
   /* position: relative; */
 }
@@ -65,7 +64,7 @@ a { text-decoration: none; color: inherit; }
 }
 
 /* Custom Cursor */
-.custom-cursor {
+/* .custom-cursor {
   position: fixed;
   top: 0;
   left: 0;
@@ -77,7 +76,7 @@ a { text-decoration: none; color: inherit; }
   transform: translate(-50%, -50%);
   transition: transform 0.15s ease-out, background-color 0.15s;
   z-index: 10000;
-}
+} */
 
 /* Preloader Overlay */
 .preloader {
@@ -189,6 +188,7 @@ nav ul li a:hover, nav ul li a:focus {
   transition: color 0.2s ease;
   background: none;
   border: none;
+  margin-left: 16px;
 }
 .theme-toggle:hover, .theme-toggle:focus,
 .hamburger:hover, .hamburger:focus {
@@ -199,6 +199,11 @@ nav ul li a:hover, nav ul li a:focus {
   display: none;
 }
 @media (max-width: 768px) {
+
+  .logo {
+    flex: 1;
+  }
+  
   nav ul { 
     position: fixed;
     top: 0;
@@ -291,13 +296,13 @@ nav ul li a:hover, nav ul li a:focus {
   display: inline-block;
   vertical-align: middle;
 }
-.cursor {
+/* .cursor {
   display: inline-block;
   width: 10px;
   background: var(--cursor-color);
   margin-left: 3px;
   animation: blink 0.7s infinite;
-}
+} */
 @keyframes blink {
   0% { opacity: 1; }
   50% { opacity: 0; }
@@ -686,3 +691,12 @@ code {
   /* animation: walk-cycle 8s linear infinite; */
 }
 
+
+
+@media (max-width: 768px) { 
+
+  #walker {
+    width: 140px;
+  }
+
+}

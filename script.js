@@ -42,6 +42,22 @@
   hamburger.addEventListener("click", () => {
     navMenu.classList.toggle("open");
   });
+
+  document.querySelectorAll("#nav-menu li a").forEach(item => {
+    item.addEventListener("click", () => {
+      navMenu.classList.remove("open");
+    });
+  });
+
+  function toggleParticleColor(newColor) {
+    $('#particles-js').addClass('toggle-color');
+    $('#button').addClass('toggle-color');
+    $.each(pJSDom[0].pJS.particles.array, function(i,p){
+      pJSDom[0].pJS.particles.array[i].color.value = newColor;
+      pJSDom[0].pJS.particles.array[i].color.rgb = hexToRgb(newColor);
+      pJSDom[0].pJS.particles.line_linked.color_rgb_line = hexToRgb(newColor);
+    });
+  }
   
   // Initialize Particles.js in the hero section
   particlesJS("particles-js", {
@@ -116,9 +132,11 @@ Building scalable apps and crushing bugs.`;
     if (body.getAttribute("data-theme") === "dark") {
       body.setAttribute("data-theme", "light");
       themeToggle.textContent = "🌙";
+      toggleParticleColor("#000000")
     } else {
       body.setAttribute("data-theme", "dark");
       themeToggle.textContent = "☀️";
+      toggleParticleColor("#ffffff")
     }
   });
   
@@ -260,7 +278,10 @@ Building scalable apps and crushing bugs.`;
     isWalking = !isWalking;
     walker.src = isWalking ? currentGif : stopGif;
     randomizeColor();
-    if (isWalking) moveWalker();
+    if (isWalking) { 
+      moveWalker();
+      window.location.reload();
+    }
   });
 
   moveWalker();
